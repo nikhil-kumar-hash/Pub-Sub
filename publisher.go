@@ -19,7 +19,7 @@ func publisher() {
 	
 	signal.Notify(sigs, syscall.SIGINT, syscall.SIGTERM)
 
-	destination := "https://sqs.us-east-2.amazonaws.com/258704584126/testqueue" // SQS url 
+	destination := "" // SQS url 
 
 	go publishMessagesFromStdIn(SendSQS, destination)
 
